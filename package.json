@@ -1,0 +1,16 @@
+{
+  "name": "parser-1c-internal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/build/index.js",
+  "scripts": {
+    "watch": "tsc --build tsconfig.json -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.4.0",
+    "typescript": "^4.3.5"
+  }
+}
