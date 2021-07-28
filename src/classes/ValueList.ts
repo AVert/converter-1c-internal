@@ -1,4 +1,6 @@
-export default class ValueList extends Array{
+import Iterable from "./Iterable";
+
+export default class ValueList extends Iterable<ValueListItem> {
 
   constructor() {
     super();

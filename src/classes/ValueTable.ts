@@ -1,31 +1,31 @@
+import Iterable from "./Iterable";
 import DataTypes from "./DataTypes";
 
-export default class ValueTable extends Array {
+export default class ValueTable extends Iterable<ValueTableRow> {
 
-  #columns: ValueTableColumnCollection;
+  #columns: ValueTableColumnCollection = new ValueTableColumnCollection();
   get columns(): ValueTableColumnCollection {
     return this.#columns;
   }
 
   constructor() {
     super();
-    this.#columns = new ValueTableColumnCollection();
   }
 
   addRow(value?: any): ValueTableRow {
     const newRow = new ValueTableRow(this.#columns, value);
-    this[this.length] = newRow;
+    this.push(newRow);
     return newRow;
   }
 }
 
-class ValueTableColumnCollection extends Array {
+class ValueTableColumnCollection extends Iterable<ValueTableColumn> {
 
   constructor() {
     super();
   }
 
-  add(name: string, type: DataTypes): ValueTableRow {
+  add(name: string, type: DataTypes): ValueTableColumn {
     const newColumn = new ValueTableColumn(name, type);
     this.push(newColumn);
     return newColumn;

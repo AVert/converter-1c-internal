@@ -1,9 +1,9 @@
 enum DataTypes {
-  String = 'S',
-  Number = 'N',
-  Boolean = 'B',
-  Date = 'D',
-  Null = 'L',
+  String    = 'S',
+  Number    = 'N',
+  Boolean   = 'B',
+  Date      = 'D',
+  Null      = 'L',
   Reference = '#'
 }
 
