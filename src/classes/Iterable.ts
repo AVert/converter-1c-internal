@@ -1,6 +1,9 @@
 export default class Iterable<T> {
 
   #entries: T[] = [];
+  /**
+  * How many items it has
+  */
   public length: number = 0;
 
   [index: number]: T;
