@@ -7,7 +7,7 @@
     "watch": "tsc --build tsconfig.json -w",
     "test": "mocha -r ts-node/register src/test/**/*.ts"
   },
-  "types": "src/index.d.ts",
+  "types": "index.d.ts",
   "author": "proudbird <proudbird.mail@gmail.com>",
   "license": "ISC",
   "keywords": ["1C"],

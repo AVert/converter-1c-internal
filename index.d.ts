@@ -3,7 +3,7 @@
  * internal format string and vice versa - from 1C:Enterprise internal 
  * format string to a JS value or object
  */
-declare class Converter {
+export declare class Converter {
 
   /**
    * @static Converts a 1C:Enterprise internal format string to a value or an object
