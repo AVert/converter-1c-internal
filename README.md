@@ -26,14 +26,14 @@
 
 Модуль можно установить в разрабатываемое приложение как зависимость с помощью npm менеджера:
 
-```
+```javascript
 npm install --save parser-1c-internal
 ```
 
 
 ### 🔧 Запуск тестов <a name = "tests"></a>
 
-```
+```javascript
 npm test
 ```
 </br>
@@ -42,7 +42,7 @@ npm test
 
 ### TypeScrit
 
-```
+```javascript
 import Converter from "parser-1c-internal";
 
 const internalStringFrom = '{"S", "Это строка из 1С"}';
