@@ -1,12 +1,4 @@
-<h2 align="center">parser-1c-internal</h3>
-</br>
-<div align="center">
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-</div>
-
----
+# parser-1c-internal
 
 ## Converts data from/to [1C:Enterprise](https://1c-dn.com/) internal format string
 
@@ -61,3 +53,5 @@ console.log(value); // 'Это строка из 1С'
 const internalStringTo = Converter.convertTo1C("Это строка из Node.js"); 
 console.log(internalStringTo); // '{"S", "Это строка из Node.js"}'
 ```
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
