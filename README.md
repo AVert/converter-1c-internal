@@ -54,9 +54,4 @@ const internalStringTo = Converter.convertTo1C("Это строка из Node.js
 console.log(internalStringTo); // '{"S", "Это строка из Node.js"}'
 ```
 
-```bsl
-Процедура Тест() 
-КонецПроцедуры
-```
-
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
