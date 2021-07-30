@@ -1,13 +1,13 @@
 {
   "name": "converter-1c-internal",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Converts data from/to 1C:Enterprise internal format string",
   "main": "/build/index.js",
   "scripts": {
     "watch": "tsc --build tsconfig.json -w",
     "test": "mocha -r ts-node/register src/test/**/*.ts"
   },
-  "types": "types.d.ts",
+  "types": "src/types.ts",
   "author": "proudbird <proudbird.mail@gmail.com>",
   "license": "ISC",
   "keywords": ["1C"],
