@@ -9,6 +9,11 @@
   },
   "types": "src/types.ts",
   "author": "proudbird <proudbird.mail@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/proudbird/converter-1c-internal.git"
+  },
+  "homepage": "https://github.com/proudbird/converter-1c-internal.git",
   "license": "ISC",
   "keywords": ["1C"],
   "devDependencies": {
