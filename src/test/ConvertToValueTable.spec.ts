@@ -7,37 +7,6 @@ import ValueTable from "../classes/ValueTable";
 import DataTypes from "../classes/DataTypes";
 import Reference from '../classes/Reference';
 
-// describe('Converting Value table to 1C internal', function() {
-//   const type = 'ValueTable';
-//   const source = new ValueTable();
-//   source.columns.add("Name", DataTypes.String);
-//   source.columns.add("Age", DataTypes.Number);
-//   source.columns.add("Male", DataTypes.Boolean);
-//   source.columns.add("Birthday", DataTypes.Date);
-//   source.addRow({
-//     Name: "Max",
-//     Age: 39,
-//     Male: true,
-//     Birthday: new Date(`1982-11-10`)
-//   });
-//   source.addRow({
-//     Name: "Kate",
-//     Age: 35,
-//     Male: false,
-//     Birthday: new Date(`1986-05-18`)
-//   });
-
-//   it(`should convert value '${source}' to 1C internal and save to the file to${type}.txt `, () => {
-//     const fileNam = joinPath(__dirname, `./sources/to${type}`);
-//     function test() {
-//       const converted = Converter.convertTo1C(source);
-//       writeFileSync(`${fileNam}.txt`, converted);
-//     }
-    
-//     expect(test).not.to.throw();
-//   });
-// });
-
 describe('Converting Value table to 1C internal', function() {
   const type = 'ValueTable';
   const source = new ValueTable();
