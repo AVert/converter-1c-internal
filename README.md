@@ -27,7 +27,7 @@
 Модуль можно установить в разрабатываемое приложение как зависимость с помощью npm менеджера:
 
 ```javascript
-npm install --save parser-1c-internal
+npm i parser-1c-internal
 ```
 
 ### Запуск тестов <a name = "tests"></a>
