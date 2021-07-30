@@ -1,11 +1,10 @@
-import sinon from 'sinon';
-import { expect, should  } from 'chai';
+import { expect  } from 'chai';
 import { readFileSync, writeFileSync } from "fs";
 import { join as joinPath } from "path";
 import Parser from "../Parser";
 
 describe('Parsing 1C internal value table', function() {
-  const fileNam = joinPath(__dirname, `./sources/ValueTable`);
+  const fileNam = joinPath(__dirname, `./results/ValueTable`);
   const source = readFileSync(`${fileNam}.txt`, 'utf-8');
   const parsed = Parser.parse(source);
   writeFileSync(`${fileNam}.json`, JSON.stringify(parsed));

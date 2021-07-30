@@ -3,7 +3,7 @@
  * internal format string and vice versa - from 1C:Enterprise internal 
  * format string to a JS value or object
  */
-export declare class Converter {
+ export declare class Converter {
 
   /**
    * @static Converts a 1C:Enterprise internal format string to a value or an object
@@ -16,7 +16,7 @@ export declare class Converter {
   static convertTo1C(item: string | number | boolean | null | Date | Array<any> | IReference | IValueList | IValueTable): string;
 }
 
-declare enum DataTypes {
+export declare enum DataTypes {
   String    = 'S',
   Number    = 'N',
   Boolean   = 'B',
@@ -35,7 +35,7 @@ declare interface IReference {
 * Special object to represent a reference to a Metadata object
 * inside 1C:Enterprise application
 */
-declare class Reference implements IReference {
+export declare class Reference implements IReference {
   meteDataObjectId: string;
   dataBaseTableId: number;
   linkId: string;
@@ -69,7 +69,7 @@ declare interface IValueListItem {
  * Contains a collection of {@link ValueTableItem} objects and can be iterated through
  * all the items and every item can be getten by index.
  */
-declare class ValueList implements IValueList {
+export declare class ValueList implements IValueList {
   [index: number]: ValueListItem;
   length: number;
 
@@ -133,7 +133,7 @@ declare interface IValueTable {
 * all the records and every record (row) can be getten by index. Records (rows) are 
 * the objects of type {@link ValueTableRow}.
 */
-declare class ValueTable implements IValueTable {
+export declare class ValueTable implements IValueTable {
 
   [index: number]: ValueTableRow<any>;
 

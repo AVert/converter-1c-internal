@@ -1,6 +1,5 @@
-import sinon from 'sinon';
-import { expect, should  } from 'chai';
-import { readFileSync, writeFileSync } from "fs";
+import { expect  } from 'chai';
+import { writeFileSync } from "fs";
 import { join as joinPath } from "path";
 import Converter from "../Converter";
 import ValueTable from "../classes/ValueTable";
@@ -32,7 +31,7 @@ describe('Converting Value table to 1C internal', function() {
     Parent: parent2
   });
 
-  const fileName = joinPath(__dirname, `./sources/to${type}1.txt`);
+  const fileName = joinPath(__dirname, `./results/to${type}1.txt`);
   it(`should convert value '${source}' to 1C internal and save to the file ${fileName}`, () => {
     function test() {
       const converted = Converter.convertTo1C(source);
@@ -71,7 +70,7 @@ describe('Converting a ValueTable-like object to 1C internal', function() {
     }
   };
 
-  const fileName = joinPath(__dirname, `./sources/to${type}2.txt`);
+  const fileName = joinPath(__dirname, `./results/to${type}2.txt`);
   it(`should convert value '${source}' to 1C internal and save to the file ${fileName}`, () => {
     function test() {
       const converted = Converter.convertTo1C(source);

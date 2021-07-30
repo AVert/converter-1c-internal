@@ -1,6 +1,5 @@
-import sinon from 'sinon';
-import { expect, should  } from 'chai';
-import { readFileSync, writeFileSync } from "fs";
+import { expect  } from 'chai';
+import { readFileSync } from "fs";
 import { join as joinPath } from "path";
 import Converter from "../Converter";
 import ValueTable from "../classes/ValueTable";

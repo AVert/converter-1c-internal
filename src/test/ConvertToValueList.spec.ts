@@ -1,6 +1,5 @@
-import sinon from 'sinon';
-import { expect, should  } from 'chai';
-import { readFileSync, writeFileSync } from "fs";
+import { expect  } from 'chai';
+import { writeFileSync } from "fs";
 import { join as joinPath } from "path";
 import Converter from "../Converter";
 import ValueList from "../classes/ValueList";
@@ -14,7 +13,7 @@ describe('Converting Value list to 1C internal', function() {
   source.add([1,2,3], `It is an array`);
   source.add(null);
   it(`should convert value '${source}' to 1C internal and save to the file to${type}.txt `, () => {
-    const fileNam = joinPath(__dirname, `./sources/to${type}`);
+    const fileNam = joinPath(__dirname, `./results/to${type}`);
     function test() {
       const converted = Converter.convertTo1C(source);
       writeFileSync(`${fileNam}.txt`, converted);
