@@ -16,7 +16,7 @@
 
 </br>
 
-## 🏁 Начало работы <a name = "getting_started"></a>
+## Начало работы <a name = "getting_started"></a>
 
 ### Требования
 
@@ -30,15 +30,15 @@
 npm install --save parser-1c-internal
 ```
 
-
-### 🔧 Запуск тестов <a name = "tests"></a>
+### Запуск тестов <a name = "tests"></a>
 
 ```javascript
 npm test
 ```
+
 </br>
 
-## 🎈 Использование <a name="usage"></a>
+## Использование <a name="usage"></a>
 
 ### TypeScrit
 
@@ -52,6 +52,11 @@ console.log(value); // 'Это строка из 1С'
 
 const internalStringTo = Converter.convertTo1C("Это строка из Node.js"); 
 console.log(internalStringTo); // '{"S", "Это строка из Node.js"}'
+```
+
+```bsl
+Процедура Тест() 
+КонецПроцедуры
 ```
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
