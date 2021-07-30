@@ -60,7 +60,7 @@ describe('Converting null to 1C internal', function() {
   const source = null;
   const etalon = `{"L"}`;
   it(`should convert value '${source}' to 1C internal and save to the file to${type}.txt `, () => {
-    const fileNam = joinPath(__dirname, `./sources/to${type}`);
+    const fileNam = joinPath(__dirname, `./results/to${type}`);
     const converted = Converter.convertTo1C(source);
     writeFileSync(`${fileNam}.txt`, converted);
     
