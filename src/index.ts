@@ -1,5 +1,5 @@
-export * from "./Converter";
-export * from "./classes/DataTypes";
-export * from "./classes/Reference";
-export * from "./classes/ValueList";
-export * from "./classes/ValueTable";
+export * as Converter from "./Converter";
+export * as DataTypes from "./classes/DataTypes";
+export * as Reference from "./classes/Reference";
+export * as ValueList from "./classes/ValueList";
+export * as ValueTable from "./classes/ValueTable";
