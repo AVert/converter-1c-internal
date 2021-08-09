@@ -22,7 +22,7 @@ export default class Converter {
   /**
   * @static Converts a value or an object to the 1C:Enterprise internal format string
   */
-  static convertTo1C(item: string | number | boolean | null | Date | Array<any> | IReference | IValueList | IValueTable): string {
+  static convertTo1C(item: string | number | boolean | null | Date | Array<any> | IReference | IValueList | IValueTable | Structure ): string {
     return convertTo(item);
   }
 }

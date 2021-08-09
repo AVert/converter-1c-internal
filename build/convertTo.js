@@ -13,7 +13,8 @@ const executers = {
     'Reference': convertReference,
     'Array': convertArray,
     'ValueList': convertValueList,
-    'ValueTable': convertValueTable
+    'ValueTable': convertValueTable,
+    'Object': convertStructure,
 };
 function convertTo(item) {
     let type = typeof item;
@@ -175,5 +176,18 @@ function valueTableColumnPattern(column, item) {
         result = `,{"${column.type}"}`;
     }
     return result;
+}
+function convertStructure(value) {
+    // header
+    const result = [`{"#",4238019d-7e49-4fc9-91db-b6b951d5cf8e,\n{${Object.keys(value).length},`];
+    // items/data section
+    const data = [];
+    for (let key in value) {
+        data.push(`{{"S", "${key}"},\n${convertTo(value[key])}}`);
+    }
+    // end section
+    result.push(data.join(',\n'));
+    result.push('}\n}');
+    return result.join('\n');
 }
 //# sourceMappingURL=convertTo.js.map

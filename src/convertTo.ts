@@ -13,10 +13,11 @@ const executers: Executers = {
   'Reference' : convertReference,
   'Array'     : convertArray,
   'ValueList' : convertValueList,
-  'ValueTable': convertValueTable
+  'ValueTable': convertValueTable,
+  'Object'    : convertStructure,
 }
 
-export default function convertTo(item: string | number | boolean | null | Date | Array<any> | IReference | IValueList | IValueTable): string {
+export default function convertTo(item: string | number | boolean | null | Date | Array<any> | IReference | IValueList | IValueTable | Structure): string {
 
   let type: string = typeof item;
   if(item === null) {
@@ -198,4 +199,23 @@ function valueTableColumnPattern(column: ValueTableColumn, item: IValueTableRow<
   }
 
   return result;
+}
+
+function convertStructure(value: any[]): string {
+
+  // header
+  const result = [`{"#",4238019d-7e49-4fc9-91db-b6b951d5cf8e,\n{${Object.keys(value).length
+  },`];
+  
+  // items/data section
+  const data = [];
+  for(let key in value) {
+    data.push(`{{"S", "${key}"},\n${convertTo(value[key])}}`);
+  }
+
+  // end section
+  result.push(data.join(',\n'))
+  result.push('}\n}');
+
+  return result.join('\n');
 }

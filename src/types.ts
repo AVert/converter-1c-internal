@@ -204,3 +204,7 @@ declare class ValueTableRow<T>  implements IValueTableRow<T>{
 
   [key: string]: T
 }
+
+export declare type Structure = {
+  [key: string]: string | number | boolean | null | Date | Array<any> | IReference | IValueList | IValueTable | Structure
+}

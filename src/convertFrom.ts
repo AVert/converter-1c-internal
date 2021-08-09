@@ -15,7 +15,8 @@ const executers: Executers = {
   'L': parseNull,
   'acf6192e-81ca-46ef-93a6-5a6968b78663': parseValueTable,
   '4772b3b4-f4a3-49c0-a1a5-8cb5961511a3': parseValueList,
-  '51e7a0d2-530b-11d4-b98a-008048da3034': parseArray
+  '51e7a0d2-530b-11d4-b98a-008048da3034': parseArray,
+  '4238019d-7e49-4fc9-91db-b6b951d5cf8e': parseStructure
 }
 
 export default function convertFrom(source: any[]): Object {
@@ -100,6 +101,18 @@ function parseArray(source: any[]) {
   }
 
   return array;
+}
+
+function parseStructure(source: any[]) {
+
+  const data: any[] = (source[2] as []).slice(1);
+
+  const structure: any = {};
+  for(let item of data) {
+    structure[item[0][1]] = convertFrom(item[1]);
+  }
+
+  return structure;
 }
 
 function parseReference(source: any[]) {
