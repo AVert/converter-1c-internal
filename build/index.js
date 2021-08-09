@@ -18,11 +18,15 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ValueTable = exports.ValueList = exports.Reference = exports.DataTypes = exports.Converter = void 0;
-exports.Converter = __importStar(require("./Converter"));
+exports.Converter = exports.ValueTable = exports.ValueList = exports.Reference = exports.DataTypes = void 0;
+const Converter_1 = __importDefault(require("./Converter"));
 exports.DataTypes = __importStar(require("./classes/DataTypes"));
 exports.Reference = __importStar(require("./classes/Reference"));
 exports.ValueList = __importStar(require("./classes/ValueList"));
 exports.ValueTable = __importStar(require("./classes/ValueTable"));
+exports.Converter = Converter_1.default;
 //# sourceMappingURL=index.js.map
